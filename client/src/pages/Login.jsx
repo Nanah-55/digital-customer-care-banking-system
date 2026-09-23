@@ -70,7 +70,7 @@ function Login() {
     <div className="auth-section">
       <h2 className="auth-title">Login to Your Account</h2>
 
-      <form className="auth-form" onSubmit={handleSubmit}>
+      <form className="auth-form" onSubmit={handleSubmit} autoComplete="off">
         <div className="input-group">
           <label htmlFor="email">Email Address</label>
           <input
@@ -80,6 +80,7 @@ function Login() {
             placeholder="Email Address"
             value={formData.email}
             onChange={handleChange}
+            autoComplete="off"
             required
           />
         </div>
@@ -93,6 +94,7 @@ function Login() {
             placeholder="Password"
             value={formData.password}
             onChange={handleChange}
+            autoComplete="current-password"
             required
           />
         </div>

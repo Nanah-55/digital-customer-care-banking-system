@@ -75,7 +75,7 @@ function Register() {
     <div className="auth-section">
       <h2 className="auth-title">Create an Account</h2>
 
-      <form className="auth-form" onSubmit={handleSubmit}>
+      <form className="auth-form" onSubmit={handleSubmit} autoComplete="off">
         <div className="input-group">
           <label htmlFor="full_name">Full Name</label>
           <input
@@ -98,6 +98,7 @@ function Register() {
             placeholder="Email Address"
             value={formData.email}
             onChange={handleChange}
+            autoComplete="off"
             required
           />
         </div>
@@ -111,6 +112,7 @@ function Register() {
             placeholder="Password"
             value={formData.password}
             onChange={handleChange}
+            autoComplete="new-password"
             required
           />
         </div>
